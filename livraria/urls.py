@@ -8,7 +8,7 @@ from core.views import CategoriaViewSet, EditoraViewSet, AutorViewSet, LivroView
 router = DefaultRouter()
 router.register(r'categorias', CategoriaViewSet)
 router.register(r'editora', EditoraViewSet)
-router.register(r'autor', AutorViewSet)
+router.register(r'autores', AutorViewSet)
 router.register(r'livros', LivroViewSet)
 
 
