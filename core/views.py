@@ -19,3 +19,7 @@ class LivroViewSet(ModelViewSet):
         if self.action in ['list', 'retrieve']:
             return LivroDetailSerializer
         return LivroSerializer
+
+class AutorViewSet(ModelViewSet):
+    queryset = Livro.objects.all()
+    serializer_class = LivroSerializer
