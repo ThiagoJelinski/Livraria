@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "core",
     "corsheaders",
+    "rest_framework_simplejwt",
 
 ]
 
@@ -125,6 +126,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.IsAuthenticated",
-    ]
+        "rest_framework.permissions.DjangoModelPermissions",
+    ],
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
 }
